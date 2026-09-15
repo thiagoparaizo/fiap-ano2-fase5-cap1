@@ -242,13 +242,12 @@ Detalhes em [`rpa_monitor.py`](ir-alem-2-rpa-dados/rpa_monitor.py) e no
 
 | Interface do chat | Alerta de emergência |
 |---|---|
-| ![Interface do chat](docs/screenshots/chat-interface.png) | ![Alerta de emergência](docs/screenshots/chat-alerta.png) |
+| ![Interface do chat](docs/screenshots/chat-interface.png) | ![Alerta de emergência](docs/screenshots/chat-sintomas.png) |
 
 | Intents no Watson | Dialog tree no Watson |
 |---|---|
 | ![Intents](docs/screenshots/watson-intents.png) | ![Dialog flow](docs/screenshots/watson-dialog-flow.png) |
 
-🎥 **Vídeo de demonstração (≤ 3 min):** _[inserir link do YouTube não listado ou Google Drive]_
 
 ---
 
