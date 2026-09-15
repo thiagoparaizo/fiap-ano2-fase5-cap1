@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardioIA – Assistente Cardiológico</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="chat-container">
+
+    <!-- Cabeçalho -->
+    <header class="chat-header">
+      <span class="heart-icon">🫀</span>
+      <div class="header-text">
+        <h1>CardioIA</h1>
+        <span class="subtitle">Assistente Cardiológico Virtual</span>
+      </div>
+      <span class="status-dot" id="statusDot" title="Conectando..."></span>
+    </header>
+
+    <!-- Banner de emergência (oculto por padrão) -->
+    <div class="emergency-banner" id="emergencyBanner" hidden>
+      🚨 EMERGÊNCIA — LIGUE 192 (SAMU) IMEDIATAMENTE 🚨
+    </div>
+
+    <!-- Área de mensagens -->
+    <main class="messages-area" id="messagesArea" aria-live="polite">
+      <!-- Mensagens injetadas pelo chat.js -->
+    </main>
+
+    <!-- Indicador "digitando..." -->
+    <div class="typing-indicator" id="typingIndicator" hidden>
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Sugestões rápidas -->
+    <div class="quick-replies" id="quickReplies">
+      <button type="button" data-msg="Qual a frequência cardíaca normal?">Frequência cardíaca</button>
+      <button type="button" data-msg="Qual pressão é normal?">Pressão arterial</button>
+      <button type="button" data-msg="Estou sentindo dor no peito">Relatar sintoma</button>
+      <button type="button" data-msg="ajuda">Ajuda</button>
+    </div>
+
+    <!-- Aviso legal -->
+    <p class="disclaimer">
+      ⚠️ Este assistente é informativo. Não substitui consulta médica.
+    </p>
+
+    <!-- Entrada de texto -->
+    <form class="input-area" id="chatForm" autocomplete="off">
+      <input type="text" id="userInput" placeholder="Digite sua mensagem..."
+             aria-label="Mensagem" autocomplete="off">
+      <button type="submit" id="sendBtn" aria-label="Enviar mensagem">➤</button>
+    </form>
+
+  </div>
+
+  <script src="/static/chat.js"></script>
+</body>
+</html>

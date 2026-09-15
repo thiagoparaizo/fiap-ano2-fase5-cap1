@@ -1,0 +1,29 @@
+# ── Segredos e configuração local ──
+.env
+*.env
+!.env.example
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ── Jupyter / Colab ──
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# ── IR Além 2: bancos locais e volumes ──
+*.db
+*.sqlite
+*.sqlite3
+mongo_data/
+
+
+# ── SO / IDE ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

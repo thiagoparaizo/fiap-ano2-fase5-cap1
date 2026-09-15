@@ -1,0 +1,22 @@
+version: "3.9"
+
+# CardioIA – IR Além 2
+# Sobe o MongoDB local usado pelo rpa_monitor.py para armazenar logs de
+# execução e alertas de anomalia (dado não relacional/semiestruturado).
+services:
+  mongodb:
+    # A imagem oficial do Mongo não publica variante "-alpine"; mongo:7 é a
+    # tag estável equivalente disponível no Docker Hub.
+    image: mongo:7
+    container_name: cardio_mongo
+    ports:
+      # Host:Container — 27018 no host evita conflito com outro MongoDB
+      # que já esteja rodando localmente na porta padrão 27017.
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_DATABASE: cardio_logs
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

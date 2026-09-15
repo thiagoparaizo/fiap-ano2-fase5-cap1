@@ -1,0 +1,15 @@
+# ── Entrega principal (Partes 1 e 2) ──────────────────────────
+flask==3.0.3
+flask-cors==4.0.1
+ibm-watson==8.1.0
+ibm-cloud-sdk-core==3.22.0
+python-dotenv==1.0.1
+
+# ── IR Além 1 — IA Generativa (opcional) ──────────────────────
+openai>=1.51
+
+# ── IR Além 2 — RPA + Dados Híbridos (opcional) ───────────────
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+pymongo>=4.9

@@ -1,0 +1,873 @@
+{
+  "name": "CardioIA - Assistente Cardiologico",
+  "description": "Assistente conversacional de triagem cardiologica inicial. FIAP - Fase 5, Capitulo 1 - Thiago Paraizo da Silva (RM566159).",
+  "language": "pt-br",
+  "workspace_id": "",
+  "status": "Available",
+  "learning_opt_out": false,
+  "intents": [
+    {
+      "intent": "saudacao",
+      "description": null,
+      "examples": [
+        {
+          "text": "Ola"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Oi tudo bem"
+        },
+        {
+          "text": "Olá CardioIA"
+        },
+        {
+          "text": "E aí"
+        },
+        {
+          "text": "Oi, preciso de ajuda"
+        }
+      ]
+    },
+    {
+      "intent": "despedida",
+      "description": null,
+      "examples": [
+        {
+          "text": "Tchau"
+        },
+        {
+          "text": "Até logo"
+        },
+        {
+          "text": "Obrigado tchau"
+        },
+        {
+          "text": "Encerrar atendimento"
+        },
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "Valeu, tchau"
+        },
+        {
+          "text": "Pode encerrar"
+        },
+        {
+          "text": "Era só isso, obrigado"
+        }
+      ]
+    },
+    {
+      "intent": "relatar_sintoma",
+      "description": null,
+      "examples": [
+        {
+          "text": "Estou sentindo dor no peito"
+        },
+        {
+          "text": "Tenho falta de ar"
+        },
+        {
+          "text": "Sinto palpitações"
+        },
+        {
+          "text": "Meu coração está acelerado"
+        },
+        {
+          "text": "Estou tonto"
+        },
+        {
+          "text": "Sinto fadiga há dias"
+        },
+        {
+          "text": "Tenho dor no braço esquerdo"
+        },
+        {
+          "text": "Estou com aperto no peito"
+        },
+        {
+          "text": "Sinto tontura quando levanto"
+        },
+        {
+          "text": "Ando muito cansado ultimamente"
+        },
+        {
+          "text": "Meu batimento está irregular"
+        },
+        {
+          "text": "Tenho dificuldade para respirar ao subir escadas"
+        }
+      ]
+    },
+    {
+      "intent": "perguntar_pressao",
+      "description": null,
+      "examples": [
+        {
+          "text": "O que é pressão alta?"
+        },
+        {
+          "text": "Qual pressão é normal?"
+        },
+        {
+          "text": "Minha pressão está 14 por 9"
+        },
+        {
+          "text": "Como controlar a hipertensão"
+        },
+        {
+          "text": "Pressão arterial normal faixa"
+        },
+        {
+          "text": "Minha pressão está baixa"
+        },
+        {
+          "text": "Quais os valores de referência da pressão arterial"
+        },
+        {
+          "text": "Sou hipertenso, o que fazer?"
+        },
+        {
+          "text": "Pressão 160 por 100 é perigoso?"
+        }
+      ]
+    },
+    {
+      "intent": "perguntar_frequencia",
+      "description": null,
+      "examples": [
+        {
+          "text": "Qual a frequência cardíaca normal?"
+        },
+        {
+          "text": "Meu BPM está em 110"
+        },
+        {
+          "text": "Frequência cardíaca em repouso"
+        },
+        {
+          "text": "Batimentos normais adulto"
+        },
+        {
+          "text": "Meu coração bate rápido"
+        },
+        {
+          "text": "Quantos batimentos por minuto é normal"
+        },
+        {
+          "text": "O que é taquicardia"
+        },
+        {
+          "text": "O que é bradicardia"
+        },
+        {
+          "text": "Como medir meus batimentos"
+        }
+      ]
+    },
+    {
+      "intent": "perguntar_medicamento",
+      "description": null,
+      "examples": [
+        {
+          "text": "Posso tomar aspirina?"
+        },
+        {
+          "text": "O que é betabloqueador?"
+        },
+        {
+          "text": "Para que serve estatina?"
+        },
+        {
+          "text": "Medicamento para coração"
+        },
+        {
+          "text": "Devo tomar remédio para pressão"
+        },
+        {
+          "text": "Para que serve losartana"
+        },
+        {
+          "text": "O que é anticoagulante"
+        },
+        {
+          "text": "Remédio para colesterol"
+        }
+      ]
+    },
+    {
+      "intent": "marcar_consulta",
+      "description": null,
+      "examples": [
+        {
+          "text": "Quero marcar consulta"
+        },
+        {
+          "text": "Como agendar com o cardiologista?"
+        },
+        {
+          "text": "Preciso de uma consulta"
+        },
+        {
+          "text": "Agendar atendimento"
+        },
+        {
+          "text": "Falar com médico"
+        },
+        {
+          "text": "Onde encontro um cardiologista"
+        },
+        {
+          "text": "Quero uma avaliação médica"
+        }
+      ]
+    },
+    {
+      "intent": "emergencia",
+      "description": null,
+      "examples": [
+        {
+          "text": "Estou tendo um infarto"
+        },
+        {
+          "text": "Dor no peito forte agora"
+        },
+        {
+          "text": "Não consigo respirar"
+        },
+        {
+          "text": "Emergência cardíaca"
+        },
+        {
+          "text": "Chame ambulância"
+        },
+        {
+          "text": "Coração parando"
+        },
+        {
+          "text": "Estou passando mal, muita dor no peito"
+        },
+        {
+          "text": "Socorro, acho que estou infartando"
+        },
+        {
+          "text": "Desmaiando com dor no peito"
+        }
+      ]
+    },
+    {
+      "intent": "ajuda",
+      "description": null,
+      "examples": [
+        {
+          "text": "Como você funciona?"
+        },
+        {
+          "text": "O que você faz?"
+        },
+        {
+          "text": "Me ajuda"
+        },
+        {
+          "text": "Quais opções tenho?"
+        },
+        {
+          "text": "O que posso perguntar"
+        },
+        {
+          "text": "ajuda"
+        },
+        {
+          "text": "menu"
+        },
+        {
+          "text": "Quais são suas funcionalidades"
+        }
+      ]
+    },
+    {
+      "intent": "informacao_geral",
+      "description": null,
+      "examples": [
+        {
+          "text": "O que é infarto?"
+        },
+        {
+          "text": "O que é arritmia?"
+        },
+        {
+          "text": "Explique sobre insuficiência cardíaca"
+        },
+        {
+          "text": "Doenças do coração"
+        },
+        {
+          "text": "Fatores de risco cardíaco"
+        },
+        {
+          "text": "O que é AVC"
+        },
+        {
+          "text": "Como prevenir doenças cardiovasculares"
+        },
+        {
+          "text": "O que causa entupimento das artérias"
+        }
+      ]
+    },
+    {
+      "intent": "nao_entendeu",
+      "description": null,
+      "examples": [
+        {
+          "text": "asdfgh"
+        },
+        {
+          "text": "não sei o que dizer"
+        },
+        {
+          "text": "qualquer coisa"
+        },
+        {
+          "text": "blablabla"
+        },
+        {
+          "text": "teste teste"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sintoma",
+      "description": "Sintomas cardiovasculares relatados pelo paciente",
+      "fuzzy_match": true,
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "dor_no_peito",
+          "synonyms": [
+            "dor no peito",
+            "aperto no peito",
+            "dor torácica",
+            "peito apertado",
+            "dor no torax",
+            "dor no braço esquerdo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "palpitacao",
+          "synonyms": [
+            "palpitação",
+            "palpitacoes",
+            "coração acelerado",
+            "batimento irregular",
+            "coração disparado",
+            "taquicardia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "falta_de_ar",
+          "synonyms": [
+            "falta de ar",
+            "dispneia",
+            "dificuldade respirar",
+            "sem fôlego",
+            "não consigo respirar direito"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tontura",
+          "synonyms": [
+            "tontura",
+            "vertigem",
+            "cabeça girando",
+            "tonto",
+            "cabeça leve",
+            "quase desmaiei"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fadiga",
+          "synonyms": [
+            "fadiga",
+            "cansaço",
+            "fraqueza",
+            "sem energia",
+            "canso fácil",
+            "indisposição"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "nivel_pressao",
+      "description": "Classificação informal do nível de pressão arterial",
+      "fuzzy_match": true,
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "normal",
+          "synonyms": [
+            "normal",
+            "controlada",
+            "estável",
+            "12 por 8"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "alta",
+          "synonyms": [
+            "alta",
+            "elevada",
+            "hipertensão",
+            "hipertenso",
+            "subiu",
+            "14 por 9",
+            "16 por 10"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "baixa",
+          "synonyms": [
+            "baixa",
+            "hipotensão",
+            "caiu",
+            "8 por 6"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "sys-number"
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Boas-vindas",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Olá! Sou o CardioIA, seu assistente cardiológico virtual. 🫀\nPosso ajudar com informações sobre sintomas, pressão arterial, frequência cardíaca e orientações gerais de saúde.\n⚠️ Atenção: não substituo consulta médica. Em emergências, ligue 192 (SAMU).\nComo posso ajudar hoje?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "node_welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Emergência",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "🚨 EMERGÊNCIA DETECTADA! 🚨\nLigue IMEDIATAMENTE para:\n• SAMU: 192\n• Bombeiros: 193\n• Pronto-socorro mais próximo\nNão aguarde atendimento virtual em situações de risco de vida.\nVocê está em local seguro agora?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#emergencia",
+      "dialog_node": "node_emergencia",
+      "previous_sibling": "node_welcome",
+      "context": {
+        "nivel_urgencia": "emergencia"
+      }
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Olá! Fico feliz em te atender. 😊\nSou o CardioIA e posso ajudar com:\n• Informações sobre sintomas cardíacos\n• Orientações sobre pressão arterial e frequência cardíaca\n• Dúvidas sobre medicamentos (apenas informativas)\n• Indicação de quando buscar atendimento médico\nO que você gostaria de saber?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saudacao",
+      "dialog_node": "node_saudacao",
+      "previous_sibling": "node_emergencia"
+    },
+    {
+      "type": "standard",
+      "title": "Relatar Sintoma",
+      "output": {},
+      "conditions": "#relatar_sintoma",
+      "dialog_node": "node_sintoma",
+      "previous_sibling": "node_saudacao",
+      "next_step": {
+        "behavior": "skip_user_input"
+      }
+    },
+    {
+      "type": "standard",
+      "title": "Sintoma: dor no peito",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Dor no peito é um sintoma que merece atenção imediata. ⚠️\nAlgumas perguntas importantes:\n• A dor é forte e constante ou leve e passageira?\n• Irradia para o braço, pescoço ou mandíbula?\n• Está acompanhada de falta de ar ou suor frio?\nSe a dor for forte e persistente, busque atendimento de emergência agora.\nCaso contrário, consulte um cardiologista o quanto antes."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@sintoma:dor_no_peito",
+      "dialog_node": "node_sintoma_peito",
+      "parent": "node_sintoma",
+      "context": {
+        "nivel_urgencia": "alto"
+      }
+    },
+    {
+      "type": "standard",
+      "title": "Sintoma: palpitação",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Palpitações podem ser benignas ou indicar arritmias. 💓\nObserve: há quanto tempo você sente isso? Acontece em repouso ou esforço?\nÉ recomendado registrar episódios (horário, duração, atividade) e apresentar para um médico.\nQuer saber como medir sua frequência cardíaca?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@sintoma:palpitacao",
+      "dialog_node": "node_sintoma_palpitacao",
+      "parent": "node_sintoma",
+      "previous_sibling": "node_sintoma_peito",
+      "context": {
+        "nivel_urgencia": "medio"
+      }
+    },
+    {
+      "type": "standard",
+      "title": "Sintoma: falta de ar",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Falta de ar (dispneia) pode ter origem cardíaca ou respiratória. 🫁\nSinais de alerta: surgir em repouso, piorar ao deitar, vir com inchaço nas pernas ou dor no peito.\nSe a falta de ar for súbita ou intensa, procure emergência imediatamente.\nSe for progressiva ao esforço, agende avaliação com cardiologista."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@sintoma:falta_de_ar",
+      "dialog_node": "node_sintoma_falta_ar",
+      "parent": "node_sintoma",
+      "previous_sibling": "node_sintoma_palpitacao",
+      "context": {
+        "nivel_urgencia": "alto"
+      }
+    },
+    {
+      "type": "standard",
+      "title": "Sintoma: orientação geral",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Entendo que você está relatando um sintoma<? entities['sintoma'] ? (': ' + entities['sintoma'].literal) : '' ?>.\nSintomas persistentes merecem avaliação médica. Posso te orientar sobre quando buscar atendimento de urgência ou como agendar uma consulta.\nO que você prefere?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "true",
+      "dialog_node": "node_sintoma_default",
+      "parent": "node_sintoma",
+      "previous_sibling": "node_sintoma_falta_ar"
+    },
+    {
+      "type": "standard",
+      "title": "Pressão Arterial",
+      "output": {},
+      "conditions": "#perguntar_pressao",
+      "dialog_node": "node_pressao",
+      "previous_sibling": "node_sintoma",
+      "next_step": {
+        "behavior": "skip_user_input"
+      }
+    },
+    {
+      "type": "standard",
+      "title": "Pressão alta",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Pressão alta (hipertensão) é definida por valores ≥ 140/90 mmHg. 🔴\nFatores de risco: obesidade, sedentarismo, dieta rica em sal, estresse.\nO tratamento inclui mudanças de estilo de vida e, quando necessário, medicação.\nNunca interrompa medicamentos por conta própria. Consulte seu médico."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@nivel_pressao:alta",
+      "dialog_node": "node_pressao_alta",
+      "parent": "node_pressao"
+    },
+    {
+      "type": "standard",
+      "title": "Pressão baixa",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Pressão baixa (hipotensão) é geralmente < 90/60 mmHg. 🔵\nPode causar tontura, desmaio e fraqueza.\nHidratação adequada e alimentação fracionada costumam ajudar.\nSe os sintomas forem frequentes, consulte um médico."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@nivel_pressao:baixa",
+      "dialog_node": "node_pressao_baixa",
+      "parent": "node_pressao",
+      "previous_sibling": "node_pressao_alta"
+    },
+    {
+      "type": "standard",
+      "title": "Pressão: valores de referência",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Os valores de referência para pressão arterial são:\n✅ Normal: até 120/80 mmHg\n⚠️ Pré-hipertensão: 121-139 / 81-89 mmHg\n🔴 Hipertensão Estágio 1: 140-159 / 90-99 mmHg\n🔴 Hipertensão Estágio 2: ≥ 160 / ≥ 100 mmHg\nAs medições devem ser feitas em repouso, preferencialmente acompanhadas pelo médico."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "true",
+      "dialog_node": "node_pressao_default",
+      "parent": "node_pressao",
+      "previous_sibling": "node_pressao_baixa"
+    },
+    {
+      "type": "standard",
+      "title": "Frequência Cardíaca",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "A frequência cardíaca normal em adultos em repouso é de 60 a 100 BPM. ❤️\n• Atletas treinados: pode ser 40-60 BPM (normal para eles)\n• Taquicardia: > 100 BPM em repouso\n• Bradicardia: < 60 BPM (em não-atletas)\nPara medir: conte os batimentos em 15 segundos e multiplique por 4.\nValores fora da faixa normal de forma persistente merecem avaliação médica."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#perguntar_frequencia",
+      "dialog_node": "node_frequencia",
+      "previous_sibling": "node_pressao"
+    },
+    {
+      "type": "standard",
+      "title": "Medicamentos",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Posso compartilhar informações gerais sobre medicamentos cardíacos, mas é fundamental que qualquer medicação seja prescrita por um médico. 💊\nClasses comuns:\n• Betabloqueadores: controlam frequência e pressão\n• Estatinas: reduzem colesterol\n• Anticoagulantes: previnem coágulos\n• IECA/BRA: protegem coração e rins em hipertensos\nSobre qual medicamento você gostaria de saber mais?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#perguntar_medicamento",
+      "dialog_node": "node_medicamento",
+      "previous_sibling": "node_frequencia"
+    },
+    {
+      "type": "standard",
+      "title": "Marcar Consulta",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Para agendar consulta com cardiologista, você pode: 📅\n• Pelo SUS: procurar a UBS (Unidade Básica de Saúde) para encaminhamento\n• Plano de saúde: ligar para o número no verso do cartão\n• Particular: buscar no site da Sociedade Brasileira de Cardiologia (cardiol.br)\nDeseja saber quais sintomas indicam urgência no atendimento?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#marcar_consulta",
+      "dialog_node": "node_consulta",
+      "previous_sibling": "node_medicamento"
+    },
+    {
+      "type": "standard",
+      "title": "Informação Geral",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "As doenças cardiovasculares são a principal causa de morte no Brasil e no mundo.\nAs mais comuns incluem:\n🫀 Infarto do miocárdio: obstrução de artérias coronárias\n⚡ Arritmia: alteração no ritmo cardíaco\n💧 Insuficiência cardíaca: o coração não bombeia sangue suficientemente\n🧠 AVC: interrupção do fluxo sanguíneo cerebral\nFatores de risco modificáveis: tabagismo, sedentarismo, obesidade, dieta inadequada.\nSobre qual condição gostaria de mais detalhes?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#informacao_geral",
+      "dialog_node": "node_info_geral",
+      "previous_sibling": "node_consulta"
+    },
+    {
+      "type": "standard",
+      "title": "Ajuda",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Posso te ajudar com: 🆘\n1️⃣ Relatar sintomas → te oriento sobre urgência\n2️⃣ Pressão arterial → valores de referência e orientações\n3️⃣ Frequência cardíaca → o que é normal\n4️⃣ Medicamentos → informações gerais (nunca prescrevendo)\n5️⃣ Agendar consulta → como e onde buscar atendimento\n6️⃣ Informações gerais → doenças e fatores de risco\nDigite sua dúvida em linguagem natural. Estou aqui! 😊"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#ajuda",
+      "dialog_node": "node_ajuda",
+      "previous_sibling": "node_info_geral"
+    },
+    {
+      "type": "standard",
+      "title": "Despedida",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Foi um prazer ajudar! Lembre-se: cuide do seu coração. 🫀\n• Exercite-se regularmente\n• Mantenha alimentação equilibrada\n• Evite tabaco e álcool em excesso\n• Faça check-ups periódicos\nEm caso de emergência: SAMU 192. Até logo! 👋"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#despedida",
+      "dialog_node": "node_despedida",
+      "previous_sibling": "node_ajuda"
+    },
+    {
+      "type": "standard",
+      "title": "Não Entendeu (Fallback)",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Desculpe, não entendi bem. 🤔\nPosso ajudar com sintomas, pressão arterial, frequência cardíaca, medicamentos ou informações gerais sobre saúde cardíaca.\nTente reformular sua pergunta ou digite 'ajuda' para ver as opções."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_fallback",
+      "previous_sibling": "node_despedida"
+    }
+  ],
+  "counterexamples": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Para confirmar, você gostaria de falar sobre:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das opções"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você gostaria de falar com um atendente humano?"
+    },
+    "spelling_auto_correct": true
+  }
+}

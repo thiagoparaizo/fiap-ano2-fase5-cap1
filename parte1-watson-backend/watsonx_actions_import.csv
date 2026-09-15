@@ -1,0 +1,87 @@
+Ola,saudacao
+Olá,saudacao
+Oi,saudacao
+Bom dia,saudacao
+Boa tarde,saudacao
+Boa noite,saudacao
+Oi tudo bem,saudacao
+Olá CardioIA,saudacao
+E aí,saudacao
+Oi preciso de ajuda,saudacao
+Tchau,despedida
+Até logo,despedida
+Obrigado tchau,despedida
+Encerrar atendimento,despedida
+Até mais,despedida
+Valeu tchau,despedida
+Pode encerrar,despedida
+Era só isso obrigado,despedida
+Estou sentindo dor no peito,relatar_sintoma
+Tenho falta de ar,relatar_sintoma
+Sinto palpitações,relatar_sintoma
+Meu coração está acelerado,relatar_sintoma
+Estou tonto,relatar_sintoma
+Sinto fadiga há dias,relatar_sintoma
+Tenho dor no braço esquerdo,relatar_sintoma
+Estou com aperto no peito,relatar_sintoma
+Sinto tontura quando levanto,relatar_sintoma
+Ando muito cansado ultimamente,relatar_sintoma
+Meu batimento está irregular,relatar_sintoma
+Tenho dificuldade para respirar ao subir escadas,relatar_sintoma
+O que é pressão alta?,perguntar_pressao
+Qual pressão é normal?,perguntar_pressao
+Minha pressão está 14 por 9,perguntar_pressao
+Como controlar a hipertensão,perguntar_pressao
+Pressão arterial normal faixa,perguntar_pressao
+Minha pressão está baixa,perguntar_pressao
+Quais os valores de referência da pressão arterial,perguntar_pressao
+Sou hipertenso o que fazer?,perguntar_pressao
+Pressão 160 por 100 é perigoso?,perguntar_pressao
+Qual a frequência cardíaca normal?,perguntar_frequencia
+Meu BPM está em 110,perguntar_frequencia
+Frequência cardíaca em repouso,perguntar_frequencia
+Batimentos normais adulto,perguntar_frequencia
+Meu coração bate rápido,perguntar_frequencia
+Quantos batimentos por minuto é normal,perguntar_frequencia
+O que é taquicardia,perguntar_frequencia
+O que é bradicardia,perguntar_frequencia
+Como medir meus batimentos,perguntar_frequencia
+Posso tomar aspirina?,perguntar_medicamento
+O que é betabloqueador?,perguntar_medicamento
+Para que serve estatina?,perguntar_medicamento
+Medicamento para coração,perguntar_medicamento
+Devo tomar remédio para pressão,perguntar_medicamento
+Para que serve losartana,perguntar_medicamento
+O que é anticoagulante,perguntar_medicamento
+Remédio para colesterol,perguntar_medicamento
+Quero marcar consulta,marcar_consulta
+Como agendar com o cardiologista?,marcar_consulta
+Preciso de uma consulta,marcar_consulta
+Agendar atendimento,marcar_consulta
+Falar com médico,marcar_consulta
+Onde encontro um cardiologista,marcar_consulta
+Quero uma avaliação médica,marcar_consulta
+Estou tendo um infarto,emergencia
+Dor no peito forte agora,emergencia
+Não consigo respirar,emergencia
+Emergência cardíaca,emergencia
+Chame ambulância,emergencia
+Coração parando,emergencia
+Estou passando mal com muita dor no peito,emergencia
+Socorro acho que estou infartando,emergencia
+Desmaiando com dor no peito,emergencia
+Como você funciona?,ajuda
+O que você faz?,ajuda
+Me ajuda,ajuda
+Quais opções tenho?,ajuda
+O que posso perguntar,ajuda
+menu,ajuda
+Quais são suas funcionalidades,ajuda
+O que é infarto?,informacao_geral
+O que é arritmia?,informacao_geral
+Explique sobre insuficiência cardíaca,informacao_geral
+Doenças do coração,informacao_geral
+Fatores de risco cardíaco,informacao_geral
+O que é AVC,informacao_geral
+Como prevenir doenças cardiovasculares,informacao_geral
+O que causa entupimento das artérias,informacao_geral
